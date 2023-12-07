@@ -1,0 +1,14 @@
+<p>apartments works!</p>
+<div *ngFor="let p of listApp">
+{{p.appartNum}}
+{{p.description}}
+{{p.residence.name}}
+
+<div>
+    <h3>{{ apartment.name }}</h3>
+    
+    <button (click)="delete()">Delete</button>
+    <button (click)="update()">Update</button>
+  </div>
+  
+</div>

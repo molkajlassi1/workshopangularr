@@ -1,0 +1,9 @@
+<div *ngFor="let apartment of apartments; let i = index">
+    <app-apartment
+      [apartment]="apartment"
+      (delete)="deleteApartment(i)"
+      (update)="updateApartment(i)"
+    ></app-apartment>
+  </div>
+  
+  <app-add-apartment (add)="addApartment($event)"></app-add-apartment>

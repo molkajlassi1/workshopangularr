@@ -1,0 +1,5 @@
+<div *ngFor="let p of tv">
+    <app-show-one-product [product]="p" (sendNotif)="traitment($event)" #t></app-show-one-product>
+    <input type="submit" value="save" (click)="t.showMsg()">
+</div>
+<input type="submit" value="save 2" (click)="executeUneMehtode()" >

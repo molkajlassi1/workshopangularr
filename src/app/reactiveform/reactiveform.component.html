@@ -1,0 +1,40 @@
+<p>reactiveform works!</p>
+<label>login</label>
+<input type="text" [formControl]="login">
+<label>password</label>
+<input type="text" [formControl]="pwd">
+<input type="submit" value="save" (click)="showLogin()" [disabled]="login.invalid ||pwd.invalid">
+<hr>
+<form [formGroup]="fg">
+    <label>cin</label>
+    <input type="text" formControlName="cin">
+    <div *ngIf="cinstatus?.invalid">
+pattern
+    </div>
+    <label>name</label>
+    <input type="text" formControlName="name">
+    <div *ngIf="fg.get('name')?.invalid && fg.get('name')?.touched">
+        <div *ngIf="fg.get('name')?.errors?.['required']">
+required
+        </div>
+        <div *ngIf="fg.get('name')?.errors?.['minlength']">
+            minlength
+                    </div>
+    </div>
+    <label>surname</label>
+    <input type="text" formControlName="surname">
+    <label>email</label>
+    <input type="text" formControlName="email">
+
+    <input type="submit" value="save" (click)="afficheForm()">
+</form>
+<hr>
+<h1>form builder</h1>
+
+<form [formGroup]="formb">
+<label>age</label>
+<input type="text" formControlName="age">
+<label>adresse</label>
+<input type="text" formControlName="adresse">
+<input type="submit" value="save">
+</form>

@@ -1,0 +1,32 @@
+<h1> bonjour {{ klass |uppercase}} </h1>
+<input type="submit" value="event binding" (click)="showMsg()">
+<div [style.backgroundColor]="kolor">
+div
+</div>
+<input type="submit" value="change color" (click)="changeColor()">
+<hr>
+<input type="submit"  value="say hello" (click)="sayHello()" >
+
+<div [style.backgroundColor]="color">
+    binding
+</div>
+<input type="submit" (click)="ChangeKolor()">
+<input type="text" [(ngModel)]="color">
+<div *ngFor="let l of listResidences">
+    <div *ngIf="l.address==search || search==''">
+{{l.id}}
+{{l.name}}
+{{l.address}}
+</div>
+</div>
+<input type="text" [(ngModel)]="search">
+<!--
+<div *ngFor="let l of listResidences">
+    <div *ngIf="l.address=='Borj Cedria'">
+{{l.id}}
+{{l.name}}
+
+{{l.address}}
+</div>
+</div>
+-->
